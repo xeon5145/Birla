@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
- <p>hehe</p>
-  </body>
-</html>
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>Welcome to hospital!</h1>
+            <span>
+                <center>
+                login through doctor or patient. <br>
+                <a href="login.html" class="log">login</a>
+                </center>
+            </span>
+        </div>
+    </div>
+    </div>
