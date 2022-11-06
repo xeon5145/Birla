@@ -5,7 +5,7 @@
             <span>
                 <center>
                 login through doctor or patient. <br>
-                <a href="login.html" class="log">login</a>
+                <a href="login.php" class="log">login</a>
                 </center>
             </span>
         </div>
