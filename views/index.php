@@ -10,6 +10,12 @@
                       <h3>Password</h3>
                       <input type="password" name="password" value="" placeholder="Enter password" required>
                       <br>
+                      <div class="" style="display: grid; color: #ffffff;">
+                        <a href="" style="color: #ffffff;">Signup</a>
+                        <a href="" style="color: #ffffff;">Forgot Password</a>
+                      </div>
+                      <br>
+                        <p><?php echo $login_message; ?></p>
                       <input type="submit" name="login" value="Login">
                     </form>
                     <!-- login / Signup form here -->

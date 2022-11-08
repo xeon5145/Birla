@@ -2,7 +2,7 @@
 require_once "config.php";
 include "header.php";
 // error_reporting(0);
-
+$login_message = "";
 // login
 if(isset($_POST['login']))
 {
@@ -21,16 +21,16 @@ if(isset($_POST['login']))
 
     if($pwd == $endpass)
     {
-      echo "User verified";
+      $login_message = "User verified";
     }
     else
     {
-      echo "Wrong Password";
+      $login_message = "Wrong Password";
     }
   }
   else
   {
-    echo "No user found";
+    $login_message = "No user found";
   }
 }
 // login
