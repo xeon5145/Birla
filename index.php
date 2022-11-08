@@ -21,7 +21,8 @@ if(isset($_POST['login']))
 
     if($pwd == $endpass)
     {
-      $login_message = "User verified";
+      // $login_message = "User verified";
+      header("Location: dashboard.php");
     }
     else
     {
