@@ -10,7 +10,7 @@ if(isset($_POST['login']))
   $username = $_POST['username'];
   $password = $_POST['password'];
   // getting user vars
-  $getuser = "SELECT * FROM users WHERE username = '$username'";
+  $getuser = "SELECT username,password FROM users WHERE username = '$username'";
   $res_user = runSelect($hos_conn,$getuser,"array");
   $row_user = count($res_user);
 
