@@ -72,7 +72,7 @@
 
 
           </div>
-          <button>Profile</button>
+          <button>Profile</button >
         </div>
         <div class="card">
           <img src="./pic/img3.jpg">
