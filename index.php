@@ -21,8 +21,36 @@ if(isset($_POST['login']))
 
     if($pwd == $endpass)
     {
-      // $login_message = "User verified";
-      header("Location: dashboard.php");
+      include "mailer.php";
+
+      $mail->IsHTML(true);
+      $mail->Subject = 'Account Login';
+      $mail->Body    = '<p>
+                        Hi ,<br />
+                        Your account has been logged In successfully on '.date("d M Y")." , ".date("l").'
+                        </p><br />
+                        <sub style="color: red; font-weight: bold;">If this was not you , please change your password . Visit this page to reset your password : <a href="'.$url.'/Birla/frgtpwd.php">Reset Password</a></sub><br/>
+                        <p>With Regards</p>
+                        <p>Hospital Project</p>';
+      $mail->AltBody = '<p>
+                        Hi ,<br />
+                        Your account has been logged In successfully on '.date("d M Y")." , ".date("l").'
+                        </p><br />
+                        <sub style="color: red; font-weight: bold;">If this was not you please change your password . Visit this page to reset your password : <a href="'.$url.'/Birla/frgtpwd.php">Reset Password</a></sub><br/>
+                        <p>With Regards</p>
+                        <p>Hospital Project</p>';
+
+      $mail->addAddress('abhisheksingh5145@gmail.com');
+      if(!$mail->send())
+      {
+          // echo 'Message could not be sent.';
+          // echo 'Mailer Error: ' . $mail->ErrorInfo;
+      }
+       else
+      {
+          header("Location: dashboard.php");
+      }
+
     }
     else
     {
@@ -38,3 +66,19 @@ if(isset($_POST['login']))
 include "views/index.php";
 include "footer.php";
  ?>
+ <script>
+ var x = document.getElementById("demo");
+
+ function getLocation() {
+   if (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(showPosition);
+   } else {
+     x.innerHTML = "Geolocation is not supported by this browser.";
+   }
+ }
+
+ function showPosition(position) {
+   x.innerHTML = "Latitude: " + position.coords.latitude +
+   "<br>Longitude: " + position.coords.longitude;
+ }
+ </script>

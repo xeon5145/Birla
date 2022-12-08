@@ -15,7 +15,7 @@
                         <a href="" style="color: #ffffff;">Forgot Password</a>
                       </div>
                       <br>
-                        <p><?php echo $login_message; ?></p>
+                        <p style="font-weight: bold; text-align: center; color: #ff1409; font-size: 1.3rem;"><?php echo $login_message; ?></p>
                       <input type="submit" name="login" value="Login">
                     </form>
                     <!-- login / Signup form here -->
