@@ -6,7 +6,7 @@ $login_message = "";
 // cookies-------------
 $user_cookie = "username";
 // cookies-------------
-
+session_start();
 // redirecting to dashboard if cookie is set-----------------
 if(isset($_COOKIE[$user_cookie]))
 {
@@ -80,5 +80,7 @@ else
 // redirecting to dashboard if cookie is set-----------------
 
 include "views/index.php";
+session_unset();
+session_destroy();
 include "footer.php";
  ?>
