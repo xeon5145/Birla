@@ -21,7 +21,7 @@ else
     $username = $_POST['username'];
     $password = $_POST['password'];
     // getting user vars
-    $getuser = "SELECT username,password FROM users WHERE username = '$username'";
+    $getuser = "SELECT username,password,email FROM users WHERE username = '$username'";
     $res_user = runSelect($hos_conn,$getuser,"array");
     $row_user = count($res_user);
 
@@ -36,6 +36,7 @@ else
 
         $mail->IsHTML(true);
         $mail->Subject = 'Account Login';
+        $sendto = $pwd = $res_user[0]['email'];
         $mail->Body    = '<p>
                           Hi ,<br />
                           Your account has been logged In successfully on '.date("d M Y")." , ".date("l").'
@@ -51,7 +52,7 @@ else
                           <p>With Regards</p>
                           <p>Hospital Project</p>';
 
-        $mail->addAddress('abhisheksingh5145@gmail.com');
+        $mail->addAddress($sendto);
         if(!$mail->send())
         {
             // echo 'Message could not be sent.';

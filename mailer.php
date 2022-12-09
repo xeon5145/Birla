@@ -21,8 +21,8 @@ $mail->Host = 'smtp.office365.com';
 $mail->Port       = 587;
 $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth   = true;
-$mail->Username = 'almightyprofile@outlook.com';
+$mail->Username = 'hospitalpr111@outlook.com';
 $mail->Password = 'p5145k1188';
-$mail->SetFrom('almightyprofile@outlook.com');
+$mail->SetFrom('hospitalpr111@outlook.com');
 
  ?>
